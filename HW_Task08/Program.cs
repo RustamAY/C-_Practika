@@ -5,11 +5,7 @@
 
 Console.WriteLine("Введите натуральное число!");
 int number = Convert.ToInt32(Console.ReadLine());
-int count = 1;
-if (count == 1)
-{
-  count++;
-}
+int count = 2;
 if (number < 0)
 {
   Console.WriteLine("Введено не натуральное число!");
