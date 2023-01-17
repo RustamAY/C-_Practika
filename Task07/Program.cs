@@ -7,9 +7,9 @@
 
 Console.WriteLine("Введите трехзнаное число: ");
 int number = Convert.ToInt32(Console.ReadLine());
-if (number > 1000)
+if (number > 1000 || number < 100)
 {
-  Console.WriteLine("Вы ввели четырёхзнаное число!");
+  Console.WriteLine("Вы ввели не трехзначное число!");
 }
 else
 {
