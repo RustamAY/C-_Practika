@@ -17,8 +17,10 @@ bool Square(int num1, int num2)
   return num1 * num1 == secondNumber || num2 * num2 == firstNumber;
 }
 
-if (result == true) Console.WriteLine("Да");
-else Console.WriteLine("Нет");
+//if (result == true) Console.WriteLine("Да");
+//else Console.WriteLine("Нет");
+
+Console.WriteLine(result ? "да" : "нет");
 
 
 
