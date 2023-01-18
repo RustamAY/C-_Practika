@@ -11,32 +11,27 @@
 Console.Write("Введите трехзначное число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 int addedNumber = number;
-int result1 = ThirdNumber(number);
-if (addedNumber < 100)
-  Console.Write($"{addedNumber} -> третьей цифры нет");
-else
-  Console.Write($"{addedNumber} -> {result1}");
+if (number < 0) number = number * (-1);
+if (number < 100) Console.Write($"{addedNumber} -> третьей цифры нет");
+else Console.Write($"{addedNumber} -> {ThirdNumber(number)}");
 int ThirdNumber(int num)
 {
-
-  while (number > 1000)
+  
+  while (num > 1000)
   {
-    int div = number / 10;
-    number = div;
+    num /= 10;
   }
-  return number % 10;
+  return num % 10;
 }
 
-// Метод когда число выбирается рандомно
-
-
-// int number = new Random().Next(10, 99999);
+// Console.Write("Введите трехзначное число: ");
+// int number = Convert.ToInt32(Console.ReadLine());
 // int addedNumber = number;
-// int result1 = ThirdNumber(number);
+// int result = ThirdNumber(number);
 // if (addedNumber < 100)
 //   Console.Write($"{addedNumber} -> третьей цифры нет");
 // else
-//   Console.Write($"{addedNumber} -> {result1}");
+//   Console.Write($"{addedNumber} -> {result}");
 // int ThirdNumber(int num)
 // {
 
@@ -44,8 +39,6 @@ int ThirdNumber(int num)
 //   {
 //     int div = number / 10;
 //     number = div;
-
 //   }
-
 //   return number % 10;
 // }
