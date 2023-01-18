@@ -23,7 +23,6 @@ int ThirdNumber(int num)
   {
     int div = number / 10;
     number = div;
-
   }
   return number % 10;
 }
