@@ -12,7 +12,7 @@ bool CheckingWeekend(int day)
 
 Console.Write("Введите цифру, обозначающую день недели: ");
 int dayNumber = Convert.ToInt32(Console.ReadLine());
-bool result = CheckingWeekend(dayNumber);
+//bool result = CheckingWeekend(dayNumber);
 
 if (dayNumber < 1 || dayNumber > 7) Console.WriteLine ("Вы ввели неправильную цифру!");
-else Console.WriteLine(result ? "Да" : "Нет");
+else Console.WriteLine(/*result*/CheckingWeekend(dayNumber) ? "Да" : "Нет");
