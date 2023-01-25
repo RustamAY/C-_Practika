@@ -5,23 +5,23 @@
 // 3, 5 -> 243 (3⁵)
 // 2, 4 -> 16
 
-int Pow(int num1, int num2)
+int Pow(int numA, int numB)
 {
   int result = 1;
-  for (int i = 0; i < num2; i++)
+  for (int i = 1; i <= numB; i++)
   {
-    result = result * num1;
+    result = result * numA;
   }
   return result;
 }
 
 Console.Write("Введите число А: ");
-int number1 = Convert.ToInt32(Console.ReadLine());
+int numberA = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите натуральное число В: ");
-int number2 = Convert.ToInt32(Console.ReadLine());
-if (number2 < 0) Console.WriteLine("Введите натуральное число В!");
+int numberB = Convert.ToInt32(Console.ReadLine());
+if (numberB < 0) Console.WriteLine("Введите натуральное число В!");
 else
 {
-  int pow = Pow(number1, number2);
-  Console.WriteLine($"Число {number1} в {number2} степени = {pow}");
+  int pow = Pow(numberA, numberB);
+  Console.WriteLine($"Число {numberA} в {numberB} степени = {pow}");
 }
