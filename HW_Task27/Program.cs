@@ -13,8 +13,8 @@ int SumNumber(int num)
   int result = 0;
   for (int i = 0; i < counter; i++)
   {
-    advance = num - num % 10;
-    result = result + (num - advance);
+    advance =  num % 10;
+    result = result + advance;
     num = num / 10;
   }
   return result;
