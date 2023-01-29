@@ -47,14 +47,33 @@ double FindMinElemet(double[]array)
 
 double DifferenceMaxMin(double max, double min)
 {
-  double diff = max - min;
+  double diff = Math.Round((max - min),2);
   return diff;
 }
 
-double[] arr = CreateArrayRndDouble(10, 1, 50);
+double[] arr = CreateArrayRndDouble(5, 1, 50);
 PrinntArrayDouble(arr);
 double maximum = FindMaxElemet(arr);
 double minimum = FindMinElemet(arr);
 double diff = DifferenceMaxMin(maximum, minimum);
 Console.WriteLine($" -> {diff}");
 
+// Нахождение max, min элементов массива и разницу между ними в одном методе
+// double FindDiffMaxMinElemets(double[]array)
+// {
+//   double max =array[0];
+//   double min = array[0];
+//   double dif = 0;
+//   for (int i = 1; i < array.Length; i++)
+//   {
+//     if(max < array[i]) max=array[i];
+//     else if (min>array[i]) min=array[i];
+//     dif = Math.Round((max-min),2);
+//   }
+//   return dif;
+// }
+
+// double[] arr = CreateArrayRndDouble(5, 1, 50);
+// PrinntArrayDouble(arr);
+// double diff = FindDiffMaxMinElemets(arr);
+// Console.WriteLine($" -> {diff}");
