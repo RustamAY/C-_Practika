@@ -8,13 +8,13 @@ b1 = 2, k1 = 5, b2 = 4, k2 = 9 -> (-0,5; -0,5)
 
 double FindX(double b1, double k1, double b2, double k2)
 {
-  double x = Math.Round(((b2 - b1) / (k1 - k2)), 2);
+  double x = Math.Round(((b2 - b1) / (k1 - k2)), 1);
   return x;
 }
 
 double FindY(double b2, double k2, double x)
 {
-  double y = Math.Round((k2 * x + b2), 2);
+  double y = Math.Round((k2 * x + b2), 1);
   return y;
 }
 
