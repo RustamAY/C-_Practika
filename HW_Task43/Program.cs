@@ -29,7 +29,7 @@ Console.Write("Введите число для k2: ");
 double numK2 = Convert.ToInt32(Console.ReadLine());
 
 if (numK1==numK2) {Console.WriteLine($"Прямые y = {numK1} * x + {numB1}, y = {numK2} * x + {numB2} паралельны друг другу!");}
-else if (numK1/numK2==numB1/numB2) {Console.WriteLine($"Прямые y = {numK1} * x + {numB1}, y = {numK2} * x + {numB2} совпадают");}
+else if (numK1==numK2 && numB1==numB2) {Console.WriteLine($"Прямые y = {numK1} * x + {numB1}, y = {numK2} * x + {numB2} совпадают");}
 else
 {
 double x = FindX(numB1, numK1, numB2, numK2);
