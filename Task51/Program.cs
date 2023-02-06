@@ -38,24 +38,17 @@ void PrintMatrix(int[,] matrix)
 int MatrixDioganalSum(int[,] matrix)
 {
   int sum = default;
-  if (matrix.GetLength(1) > matrix.GetLength(0))
-  {
-    for (int i = 0; i < matrix.GetLength(0); i++)
+  int size = matrix.GetLength(0); 
+  if (matrix.GetLength(0) > matrix.GetLength(1)) size = matrix.GetLength(1);
+  
+    for (int i = 0; i < size; i++)
     {
       sum += matrix[i, i];
     }
-  }
-  else
-  {
-    for (int i = 0; i < matrix.GetLength(1); i++)
-    {
-      sum += matrix[i, i];
-    }
-  }
   return sum;
 }
 
-int[,] array2D = CreateMatrixRndInt(5, 6, 0, 10);
+int[,] array2D = CreateMatrixRndInt(6, 5, 0, 10);
 PrintMatrix(array2D);
 int matrixDioganalSum = MatrixDioganalSum(array2D);
 Console.WriteLine($"Сумма элементов главной диагонали: {matrixDioganalSum}");
