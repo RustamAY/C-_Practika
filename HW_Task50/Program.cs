@@ -45,8 +45,12 @@ int rowPosition = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите позицию столбца: ");
 int columPosition = Convert.ToInt32(Console.ReadLine());
 
-int[,] array2D = CreateMatrixRndInt(4, 4, 0, 10);
-PrintMatrix(array2D);
-Console.WriteLine(OutputElement(array2D,rowPosition,columPosition) 
-? $"Значения элемента = {array2D[rowPosition-1,columPosition-1]}" 
-: "Nакого элемента в массиве нет");
+if (rowPosition < 0 || columPosition < 0) Console.WriteLine("Введите положительные числа!");
+else
+{
+  int[,] array2D = CreateMatrixRndInt(4, 4, 0, 10);
+  PrintMatrix(array2D);
+  Console.WriteLine(OutputElement(array2D, rowPosition, columPosition)
+  ? $"Значения элемента = {array2D[rowPosition - 1, columPosition - 1]}"
+  : "Nакого элемента в массиве нет");
+}
