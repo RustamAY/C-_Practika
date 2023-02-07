@@ -34,21 +34,32 @@ void PrintMatrix(int[,] matrix)
   }
 }
 
-void ElementsAverage(int[,] matrix)
+int [] ElementsAverage(int[,] matrix)
 {
-  
+  int size = matrix.GetLength(0);
   for (int j = 0; j < matrix.GetLength(1); j++)
   {
-    double sum = default;
+    int[] sum = new int [matrix.Length];
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
-      sum += matrix[i, j];
+      sum[i] += matrix[i, j];
     }
-    Console.Write($"{Math.Round((sum / matrix.GetLength(0)),1)} | ");
+    //Console.Write($"{Math.Round((sum / size),1)} | ");
+    return sum;
   }
 }
+
+// void PrintArray(int[] sum)
+// {
+//   for (int i = 0; i < arr.Length; i++)
+//   {
+//     Console.Write($"{arr[i]}");
+//     if (i < arr.Length-1) Console.Write(", ");
+//   }
+// }
 
 int[,] array2D = CreateMatrixRndInt(4, 10, 0, 10);
 PrintMatrix(array2D);
 Console.WriteLine();
-ElementsAverage(array2D);
+int[] elementsAverage = ElementsAverage(array2D);
+Console.Write(elementsAverage);
