@@ -50,7 +50,6 @@ int[,] ReplaceMatrix(int[,] matrix)
 
 int[,] array2D = CreateMatrixRndInt(3, 3, 1, 10);
 PrintMatrix(array2D);
-ReplaceMatrix(array2D);
 Console.WriteLine();
 if (array2D.GetLength(0) == array2D.GetLength(1))
 {
