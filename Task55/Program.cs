@@ -39,21 +39,32 @@ int[,] ReplaceMatrix(int[,] matrix)
   {
     for (int j = 0; j < matrix.GetLength(1); j++)
     {
-      int tmp = matrix[i, j];
       tmpArray[j, i] = matrix[i, j];
-      matrix[i, j] = tmp;
     }
   }
   return tmpArray;
 }
 
+// меод с void
+// void ChangeRowsOnColumns(int[,] matrix)
+// {
+//   for (int i = 0; i < matrix.GetLength(0) - 1; i++)
+//   {
+//     for (int j = i + 1; j < matrix.GetLength(1); j++)
+//     {
+//       int temporary = matrix[i, j];
+//       matrix[i, j] = matrix[j, i];
+//       matrix[j, i] = temporary;
+//     }
+//   }
+// }
 
 int[,] array2D = CreateMatrixRndInt(3, 3, 1, 10);
 PrintMatrix(array2D);
 Console.WriteLine();
 if (array2D.GetLength(0) == array2D.GetLength(1))
 {
-int[,] newMatrix = ReplaceMatrix (array2D);
-PrintMatrix(newMatrix);
+  int[,] newMatrix = ReplaceMatrix(array2D);
+  PrintMatrix(newMatrix);
 }
 else Console.WriteLine("Число строк и столбцов не совпадает!");
