@@ -23,4 +23,5 @@ Console.WriteLine("Введите начальное число:");
 int number1 = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите последнее число:");
 int number2 = Convert.ToInt32(Console.ReadLine());
-NaturalNumbers(number1, number2);
+if(number1<0 || number2<0) Console.WriteLine("Введите натуральные числа");
+else NaturalNumbers(number1, number2);
