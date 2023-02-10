@@ -18,3 +18,28 @@ Console.Write("Введите число В: ");
 int number2 = Convert.ToInt32(Console.ReadLine());
 int sumDigits = SumDigits(number1, number2);
 Console.WriteLine(sumDigits);
+
+
+// оптимизированны метод
+// Console.WriteLine("введите число ");
+// int numA = Convert.ToInt32(Console.ReadLine());
+
+//  Console.WriteLine("введите число ");
+// int numB = Convert.ToInt32(Console.ReadLine());
+
+// int prodactNumbersAB = ProdactNumbersAB(numA, numB);
+// Console.WriteLine($"число {numA} в целую степень {numB} равно {prodactNumbersAB}");
+
+
+// int PowerRec (int numberA, int numberB)
+// {
+//     return numberB == 0 ? 1 : PowerRec (numberA, numberB - 1) * numberA;
+    
+// }
+
+// int ProdactNumbersAB(int numberA, int numberB)
+// {
+//     if (numberB == 0) return 1;
+//     if (numberB % 2 == 0) return ProdactNumbersAB (numberA * numberA, numberB/2);
+//     return PowerRec (numberA, numberB - 1) * numberA;
+// }
