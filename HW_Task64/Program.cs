@@ -7,18 +7,18 @@
 
 void NaturalNumbers(int num)
 {
-    if (num == 0) return;
-    Console.Write($"{num}");
-    if (num>1) Console.Write(", ");
-    NaturalNumbers(num - 1);
-    
+  if (num == 0) return;
+  Console.Write($"{num}");
+  if (num > 1) Console.Write(", ");
+  NaturalNumbers(num - 1);
+
 }
 
 Console.Write("Введите натуральное число: ");
 int number = Convert.ToInt32(Console.ReadLine());
-if (number <0) Console.WriteLine("Вы вели отрицательное число!");
+if (number < 0) Console.WriteLine("Вы вели отрицательное число!");
 else
 {
-Console.Write($"N= {number} -> ");
-NaturalNumbers(number);
+  Console.Write($"N= {number} -> ");
+  NaturalNumbers(number);
 }
