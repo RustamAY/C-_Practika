@@ -6,7 +6,7 @@ int AkermanFunction(int m, int n)
 {
 
   if (m == 0) return n + 1;
-  else if (n == 0) return AkermanFunction(m - 1, 1);
+  if (n == 0) return AkermanFunction(m - 1, 1);
   return AkermanFunction(m - 1, AkermanFunction(m, n - 1));
 }
 
